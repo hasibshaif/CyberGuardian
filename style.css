@@ -1,0 +1,424 @@
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Avantgarde', 'Trebuchet MS sans-serif', 'Optima', sans-serif;
+  background-color: #3d7da0;
+  background-image: url("img/adobe_firefly_ai_background3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  text-shadow: .5px .5px 0 #000000,
+    -.5px .5px 0 #000000,
+    -.5px -.5px 0 #000000,
+    .5px -.5px 0 #000000;
+  padding-bottom: 20px;
+}
+
+a.article-link {
+  color: #29b8ff;
+  text-shadow: .5px .5px 0 #000000,
+  -.5px .5px 0 #000000,
+  -.5px -.5px 0 #000000,
+  .5px -.5px 0 #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: #237495;
+}
+
+.navbar ul {
+  z-index: 2;
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.navbar ul li {
+  float: left;
+  margin: 1px;
+}
+
+.navbar ul li a {
+  display: block;
+  font-family: FreeMono, monospace;
+  color:white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.navbar ul li a:hover {
+    font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  max-height: 500px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+}
+
+.header-text-item {
+  font-family: "century gothic", sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.header-text-item:nth-of-type(1) {
+  font-size: 50px;
+  margin-top: 1px;
+  margin-left: 20px;
+}
+
+.header-text-item:nth-of-type(2) {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.header-button-container {
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+  top: 150px;
+  column-gap: 5px;
+  align-items: flex-end;
+  position: absolute;
+  z-index: 1;
+}
+
+.header-button-container button {
+  font-family: FreeMono, monospace;
+  border: none;
+  padding: 2% 2%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2%;
+  font-size: 15px;
+}
+
+#dark-theme-button {
+  background-color: #333;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303336;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #303336;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.dark-mode {
+  background-image: url("img/adobe_firefly_ai_background1.jpg");
+  color: white;
+}
+
+#hacked-resources-button {
+  background-color: #df1616;
+  color: #fff;
+}
+
+.section-header {
+  margin: 20px
+}
+
+.news-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin: 25px auto;
+}
+
+.card {
+  border: solid;
+  border-color: gray;
+  border-width: thin;
+  border-style: inset;
+  width: 100%;
+  position: static;
+}
+
+.news-image img {
+  width: 300px;
+  height: auto;
+}
+
+.news-content {
+  padding: 15px 20px;
+}
+
+.news-content a {
+  margin-top: 12px;
+  display: inline-block;
+  color: white;
+  background-color: #1e4152;
+  padding: 8px 15px;
+}
+
+.news-content h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.news-content p {
+  font-size: 15px;
+}
+
+.blog-section {
+  width: 85%;
+}
+
+.article-title {
+  color: black;
+}
+
+.about-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.impact-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.center-image {
+  width: 350px;
+  height: 320px;
+}
+
+.caption {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.best-practices-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.section-img {
+  width: 50%;
+  height: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#cyberbully-img {
+  width: 25%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.cyberbullying-container {
+  text-align: left;
+  margin: 20px;
+}
+
+#seniors-img {
+  width: 25%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+i {
+  color: #b71515;
+  font-weight: 600;
+}
+
+.seniors-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.petition {
+  text-align: left;
+  margin: 20px;
+}
+
+.petition-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+}
+
+.petition-para {
+  width: 55%;
+  padding-right: 10px;
+}
+
+.signatures {
+  width: 45%;
+  padding-right: 10px;
+}
+
+.sign {
+  display: flex;
+  gap: 10px; 
+}
+
+.error {
+  border-style: solid;
+  border-width: 5px;
+  border-color: red;
+  background:pink;
+}
+
+#sign-now-button {
+  background-color: #00aaff;
+  border-radius: 25px;
+}
+
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 3; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: rgba(176 196 222 0.2);/* update the colors and font sizes as you like */
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-modal {
+  background-color: #e21212;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+}
